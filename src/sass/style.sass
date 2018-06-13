@@ -1,0 +1,144 @@
+@import "includes/base"
+
+.sidebar
+  height: $fh
+  background: $navy
+  flex-basis: 17rem
+  padding: 4rem 2rem
+  color: $white
+  h4
+    letter-spacing: 0.58px
+  p
+    color: $grey
+  @media #{$phone}
+    padding: 2.5rem 2rem
+    div:first-of-type
+      padding: 2rem 0
+  logo
+    font-size: 1.75rem
+    position: absolute
+    bottom: 2rem
+    @media #{$phone} 
+      position: static
+      font-size: 1.5rem
+  a.button
+    position: absolute
+    bottom: 8rem
+    @media #{$phone} 
+      position: static
+      bottom: auto
+    &:parent
+      padding-top: 10rem
+  a.active
+    p 
+      color: $white
+  a
+    &:first-of-type
+      p
+        margin-top: 1rem
+    p
+      margin-bottom: 1rem
+      letter-spacing: 3.2px
+      &:hover
+        color: rgba(white, .9)
+.content
+  height: $fh
+  background: $dark
+  flex: 1 1 auto
+  padding: 11rem 15rem
+  color: $white
+  @media #{$phone}
+    padding: 6rem 1rem
+  .welcoming
+    @media #{$phone}
+      padding: 4rem 3rem
+      .illustration
+        display: none
+    @include rounded-corner(6px)
+    background: $light
+    display: inline-flex
+    padding: 4rem 4rem
+    align-content: center
+    align-items: center
+    span
+      font-size: 15px
+      color: #7287A5
+      letter-spacing: 0.54px
+      font-weight: bold
+    h3
+      font-size: 1.75rem
+      width: 16rem
+      font-family: $sub-font
+      font-weight: 500
+      letter-spacing: 1px
+      line-height: 2.4rem
+      padding-top: .75rem
+      margin-bottom: 1rem
+a.button
+  @include rounded-corner(6px)
+  font-weight: 200
+  font-family: $sub-font
+  background: $blue
+  color: $white
+  font-size: 1rem
+  padding: .8rem 1.5rem
+  &:hover
+    box-shadow: 0 4px 8px rgba(#000, .8)
+    background: rgba($blue, .9)    
+.chat
+  height: $fh
+  background: $dark
+  flex: 1 1 auto
+  padding: 2rem
+  display: flex
+  flex-direction: column
+  @media #{$phone}
+    padding: 1rem
+  div
+    padding: 0 2rem
+  form
+    .input
+      align-self: stretch
+      order: 0
+      flex: 0 1 auto
+      align-self: auto
+      display: flex
+      flex-direction: row
+      input
+        flex-grow: 1
+        background: #0B182B
+        border: none
+        color: $white
+        padding: 1rem
+        @include rounded-corner(6px)
+        @media #{$phone}
+          padding: 1rem
+
+
+  .messages
+    order: 0
+    flex: 1 1 auto
+    align-self: auto
+    padding: 2rem
+    overflow-y: scroll
+    @media #{$phone}
+        padding: 1rem
+    .message
+      font-family: $main-font
+      color: $white
+      margin-bottom: 2rem
+      max-width: 70vw
+      @media #{$phone}
+        max-width: 90vw
+      .code
+        font-weight: bold
+      .time
+        color: $grey
+        font-weight: lighter
+      &.system
+        p
+          color: $grey
+          font-size: .9rem
+        &:first-of-type
+          p
+            font-size: 1rem

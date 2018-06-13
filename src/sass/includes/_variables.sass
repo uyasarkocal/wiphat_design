@@ -1,0 +1,32 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,400i,500,700&subset=latin-ext')
+
+$main-font: 'Roboto Mono'
+$sub-font: Helvetica, sans-serif
+
+// COLORS
+
+$white: #fff
+$grey: #797F8A
+$blue: #1565E1
+$red: #EF303B
+$navy: #030F22
+$dark: #030C1A
+$light: #0B182B
+
+// LINKS
+
+$link-active: $white
+$link-inactive: $grey
+
+// MIXINS
+@mixin rounded-corner($arc) 
+    -moz-border-radius: $arc
+    -webkit-border-radius: $arc
+    border-radius: $arc
+
+$fh: 100vh
+
+// Responsive
+$phone: "only screen and (max-width : 500px)";

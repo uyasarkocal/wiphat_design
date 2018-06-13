@@ -1,0 +1,11 @@
+extends _layouts/home
+
+block head_end
+	link(rel="stylesheet" href="/css/style.css") 
+
+block content
+	include _partials/sidebar_engaged
+	include _partials/content_chat
+
+block body_end
+	script(type="text/javascript" src="/js/script.js")
